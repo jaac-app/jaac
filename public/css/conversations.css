@@ -1,0 +1,11 @@
+:root{
+
+    --col-error-fg: #000000;
+    --col-dark-prpl:#251331;
+    --col-blk-prpl:#5e4e6a;
+    --col-light-prpl:#8a55ac ;
+    --col-light-grey:#9598b3 ;
+    --font-body: serif;
+    --font-heading: sans-serif;
+    --animations: 0.3s;
+}
