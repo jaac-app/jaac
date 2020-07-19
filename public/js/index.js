@@ -10,7 +10,7 @@ window.addEventListener('load', ()=> {
 
     const domBtnOthers = document.getElementById(`btnOthers`);
     const domOthers = document.getElementById(`others`);
-    // test comment
+  //toggle nav bar
     domBtnOthers.addEventListener('click', event => {
         domOthers.classList.toggle('open');
     })
