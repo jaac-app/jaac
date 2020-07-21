@@ -6,10 +6,11 @@ export default class HomePage {
     constructor(){ 
         //here new instance(object) is created and class's contructor is called
         this.sideNavPanel = new SideNavPanel();
-        this.groupConversationPanel = new GroupConversationPanel("img/path",
+        this.groupConversationPanel = new GroupConversationPanel("./img/akele.jpg",
           "JAAC app", 
           "June 16, 2020", 
-          ["Aman", "Jingke", "Aurnab", "Carol"] 
+          // send group members userId in an array
+          [1, 2, 3, 4] 
           );
         this.html = this.getHTML();
     }
