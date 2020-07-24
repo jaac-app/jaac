@@ -14,4 +14,8 @@ window.addEventListener('load', ()=> {
     domBtnOthers.addEventListener('click', event => {
         domOthers.classList.toggle('open');
     })
-})
+
+    const channelBtns = document.querySelectorAll('.channelBtn');
+    console.log(channelBtns)
+
+}) 

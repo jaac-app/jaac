@@ -1,4 +1,5 @@
 import getUserById from "/js/models/user.js";
+import getChannelMessagesByID from "/js/models/channelConversations.js";
 
 export default class groupConversation{
 
@@ -7,6 +8,7 @@ export default class groupConversation{
         this.name = name;
         this.creationDate = creationDate;
         this.memberIds = memberIds;
+        this.currentChannelID = 1;
         this.html = this.getHTML();
     }
 
@@ -22,7 +24,7 @@ export default class groupConversation{
                     ${this.getMembersHTML()}
                 </div> 
                 <div>
-                    ${this.getMessagesHTML()}
+                    ${this.getMessagesByIDHTML()}
                 </div>
             </section>
         `
@@ -38,32 +40,10 @@ export default class groupConversation{
         return members.join('');
     }
 
-    getMessagesHTML(){
-        const messages = [
-            {
-                senderID: 1,
-                time: '08:00 pm',
-                text: 'Hello'
-            },
-            {
-                
-                senderID: 2,
-                time: '09:00 pm',
-                text: 'Hi'
-            },
-            {
-                senderID: 3,
-                time: '09:01 pm',
-                text: 'Hello'
-            },
-            {
-                senderID: 4,
-                time: '09:30 pm',
-                text: 'Hi guys'
-            }
+    getMessagesByIDHTML(){
 
-        ]
-
+        const messages = getChannelMessagesByID(this.currentChannelID);
+        console.log(messages)
         return messages.map(message=>{
             const userData = getUserById(message.senderID);
             const name = userData.name;
