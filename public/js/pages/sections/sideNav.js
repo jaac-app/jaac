@@ -7,8 +7,12 @@ export default class SideNavPanel{
         return `
             <aside class="others open" id="others">
                 <div class="side-bar-top-style panel">
-                    <span>Create meeting</span>
-                    <button type="button" id="createMeetingBtn">+</button>
+                    <section>
+                        <div class="sideNavSectionHeadingDiv create-meeting">
+                            <span>Create meeting</span>
+                            <button type="button" id="createMeetingBtn">+</button>
+                        </div>
+                    </section>
                     ${this.getUserOptionsHTML()}
                     ${this.getGroupChannelsHTML()}
                     ${this.getDirectChatsHTML()}
@@ -60,7 +64,7 @@ export default class SideNavPanel{
     getChannelListHTML(){
         const channelNames = ['Jaac App', 'WebStore'];
         return channelNames.map((channel, indx)=>{
-            const buttonID = `channelBtn${indx}`
+            const buttonID = `channelBtn_${indx}`
             return `
             <li><span>dp</span>
                 <button type="button" class="channelBtn" id=${buttonID}>${channel}</button>

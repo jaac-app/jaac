@@ -1,5 +1,5 @@
 const channelConversations = {
-        1: [
+        0: [
             {
                 senderID: 1,
                 time: '08:00 pm',
@@ -23,7 +23,7 @@ const channelConversations = {
             }
 
         ],
-        2:[
+        1:[
             {
                 senderID: 1,
                 time: '08:00 pm',
