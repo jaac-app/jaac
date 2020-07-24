@@ -9,6 +9,9 @@
     --font-heading: sans-serif;
     --animations: 0.3s;
 }
+.side-bar-top-style{
+    padding-top: 3em;
+}
 .panel{
     font-size: 1.3em;
 }
@@ -25,4 +28,9 @@
     background-color: var(--col-light-grey);
     border: none;
     padding: 0.5em;
+}
+.sideNavSectionHeadingDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
