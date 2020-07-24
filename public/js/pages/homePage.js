@@ -3,20 +3,14 @@ import GroupConversationPanel from "./sections/groupConversation.js";
 
 export default class HomePage {
 
-    constructor(){ 
+    constructor(currentConversationID){ 
         //here new instance(object) is created and class's contructor is called
         this.sideNavPanel = new SideNavPanel();
-        this.groupConversationPanel = new GroupConversationPanel("./img/akele.jpg",
-          "JAAC app", 
-          "June 16, 2020", 
-          // send group members userId in an array
-          [1, 2, 3, 4] 
-          );
+        this.groupConversationPanel = new GroupConversationPanel(currentConversationID);
         this.html = this.getHTML();
     }
 
     getHTML(){
-    
         return `
         <div class="layout">
         <header class="branding">

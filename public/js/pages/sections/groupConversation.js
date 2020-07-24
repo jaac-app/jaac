@@ -1,14 +1,15 @@
 import getUserById from "/js/models/user.js";
 import getChannelMessagesByID from "/js/models/channelConversations.js";
-
+import getChannelDetailsByID from "/js/models/channelDetails.js";
 export default class groupConversation{
 
-    constructor(picture, name, creationDate, memberIds){
-        this.picture = picture;
-        this.name = name;
-        this.creationDate = creationDate;
-        this.memberIds = memberIds;
-        this.currentChannelID = 1;
+    constructor(currentChannelID){
+        const details = getChannelDetailsByID(currentChannelID);
+        this.picture =  details.imgURL;
+        this.name = details.name;
+        this.creationDate = details.createdAt;
+        this.memberIds = details.membersIDs;
+        this.currentChannelID = currentChannelID;
         this.html = this.getHTML();
     }
 

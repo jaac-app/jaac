@@ -1,6 +1,6 @@
 import HomePage from "./pages/homePage.js";
 
-const homePage = new HomePage();
+let homePage = new HomePage(0);
 
 window.addEventListener('load', ()=> {
     
@@ -16,6 +16,18 @@ window.addEventListener('load', ()=> {
     })
 
     const channelBtns = document.querySelectorAll('.channelBtn');
-    console.log(channelBtns)
+    channelBtns.forEach(button => {
+      // add event listener
+      button.addEventListener('click', () => {
+        const splittedArray = button.id.split('_');
+        const channelID = parseInt(splittedArray[splittedArray.length-1]);
+        console.log(`ID: ${channelID}`);
+
+        homePage = new HomePage(channelID);
+        body.innerHTML = homePage.html;
+
+      })
+    });
+    
 
 }) 
