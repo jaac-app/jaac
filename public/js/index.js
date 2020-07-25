@@ -21,13 +21,12 @@ window.addEventListener('load', ()=> {
       button.addEventListener('click', () => {
         const splittedArray = button.id.split('_');
         const channelID = parseInt(splittedArray[splittedArray.length-1]);
-        console.log(`ID: ${channelID}`);
+        //console.log(`ID: ${channelID}`);
 
-        homePage = new HomePage(channelID);
-        body.innerHTML = homePage.html;
-
+        homePage.groupConversationPanel.updateConversationHTML(channelID);
       })
     });
+    
     
 
 }) 
