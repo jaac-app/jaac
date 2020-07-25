@@ -7,7 +7,7 @@ const channelDetails = {
         membersIDs: [1, 2, 3, 4]
     },
     1: {
-        imgURL: "./img/akele.jpg",
+        imgURL: "./img/akon.jpg",
         name: "Webstore app", 
         createdAt: "June 20, 2020", 
         // send group members userId in an array

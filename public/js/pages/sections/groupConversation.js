@@ -15,7 +15,7 @@ export default class groupConversation{
 
     getHTML(){
         return `
-            <section class="section">
+            <section class="section" id="groupConversationsContainer">
                 <div class="img-border">
                     <img src="${this.picture}">
                 </div>
@@ -29,6 +29,16 @@ export default class groupConversation{
                 </div>
             </section>
         `
+    }
+    //update the conversation html when clicking on channel button, but it will not replace the full home page
+    updateConversationHTML(channelID){
+        const details = getChannelDetailsByID(channelID);
+        this.picture =  details.imgURL;
+        this.name = details.name;
+        this.creationDate = details.createdAt;
+        this.memberIds = details.membersIDs;
+        this.currentChannelID = channelID;
+        document.getElementById('groupConversationsContainer').innerHTML = this.getHTML();
     }
     //
     getMembersHTML(){

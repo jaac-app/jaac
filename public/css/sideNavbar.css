@@ -34,3 +34,7 @@
     justify-content: space-between;
     align-items: center;
 }
+.main-search-input{
+    padding: 0.2em;
+    border-radius: 1em;
+}

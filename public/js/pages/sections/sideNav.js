@@ -8,9 +8,15 @@ export default class SideNavPanel{
             <aside class="others open" id="others">
                 <div class="side-bar-top-style panel">
                     <section>
+                        <div class="sideNavSectionHeadingDiv main-search">
+                        <input type="text" id="mainSearchInput" class="main-search-input" placeholder="Search" >
+                            <button type="button" id="mainSearchBtn"><i class="fas fa-search"></i></button>
+                        </div>
+                    </section>
+                    <section>
                         <div class="sideNavSectionHeadingDiv create-meeting">
                             <span>Create meeting</span>
-                            <button type="button" id="createMeetingBtn">+</button>
+                            <button type="button" id="createMeetingBtn"> <i class="fas fa-video"></i></button>
                         </div>
                     </section>
                     ${this.getUserOptionsHTML()}
@@ -25,10 +31,10 @@ export default class SideNavPanel{
     getUserOptionsHTML(){
         return `
             <section>
-                <h1>My Profile</h1>
+                <h1><i class="fas fa-user"> My Profile</i></h1>
                 <ul>
-                    <li>Settings </li>
-                    <li>My Notes </li>
+                    <li><i class="fas fa-cog"></i> Settings </li>
+                    <li><i class="far fa-sticky-note"></i> My Notes </li>
                 <ul>
             </section>
         `
@@ -39,7 +45,7 @@ export default class SideNavPanel{
             <section>
                 <div class="sideNavSectionHeadingDiv">
                     <span>Group Channels</span>
-                    <button type="button" id="createGroupChannelBtn">+</button>
+                    <button type="button" id="createGroupChannelBtn"><i class="fas fa-plus"></i></button>
                 </div>
                 <ul>
                     ${this.getChannelListHTML()}
@@ -52,7 +58,7 @@ export default class SideNavPanel{
             <section>
                 <div class="sideNavSectionHeadingDiv">
                     <span>Direct Messages</span>
-                    <button type="button" id="createDirectMessageBtn">+</button>
+                    <button type="button" id="createDirectMessageBtn"><i class="fas fa-plus"></i></button>
                 </div>
                 <ul>
                     ${this.getChatsListHTML()}
