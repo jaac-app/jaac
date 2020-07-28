@@ -24,6 +24,8 @@ window.addEventListener('load', ()=> {
         //console.log(`ID: ${channelID}`);
 
         homePage.groupConversationPanel.updateConversationHTML(channelID);
+        console.log("test");
+        domOthers.classList.toggle('open');
       })
     });
     

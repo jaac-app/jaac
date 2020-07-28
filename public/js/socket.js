@@ -42,30 +42,30 @@ messageForm.addEventListener('submit',ele =>{
     messageInput.value=''
 })
 
-function appendMessage(message, time = null){
-    console.log(message);
-    if(time == null){
-        messageContainer.innerHTML += `
-        <div class="center-msg">
-            <span>${message}</span>
-        </div>`
-    }
-    else if(message.startsWith("You:")){
-        messageContainer.innerHTML += `
-        <div class="right-msg ">
-            <div class="right-message-container">
-                <span class="message">${message}</span>
-                <span class="time">${time}</span>
-            </div>
-        </div>`
-    }
-    else{
-        messageContainer.innerHTML += `
-        <div class="left-msg"> 
-            <div class="left-message-container">
-                <span>${message}</span>
-                <span class="time">${time}</span>
-            </div>
-        </div>`
-    }
+// function appendMessage(message, time = null){
+//     console.log(message);
+//     if(time == null){
+//         messageContainer.innerHTML += `
+//         <div class="center-msg">
+//             <span>${message}</span>
+//         </div>`
+//     }
+//     else if(message.startsWith("You:")){
+//         messageContainer.innerHTML += `
+//         <div class="right-msg ">
+//             <div class="right-message-container">
+//                 <span class="message">${message}</span>
+//                 <span class="time">${time}</span>
+//             </div>
+//         </div>`
+//     }
+//     else{
+//         messageContainer.innerHTML += `
+//         <div class="left-msg"> 
+//             <div class="left-message-container">
+//                 <span>${message}</span>
+//                 <span class="time">${time}</span>
+//             </div>
+//         </div>`
+//     }
 }
