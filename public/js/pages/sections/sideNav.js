@@ -33,8 +33,8 @@ export default class SideNavPanel{
             <section>
                 <h1><i class="fas fa-user"> My Profile</i></h1>
                 <ul>
-                    <li><i class="fas fa-cog"></i> Settings </li>
-                    <li><i class="far fa-sticky-note"></i> My Notes </li>
+                    <li><i class="fas fa-cog"> Settings </i></li>
+                    <li><i  id="notes" class="far fa-sticky-note"> My Notes </i></li>
                 <ul>
             </section>
         `
