@@ -5,7 +5,7 @@ const Homepage = () => {
         <>
         <div className="layout">
             <header className="branding">
-            <h1 className="logo">JAAC</h1>
+                <h1 className="logo">JAAC</h1>
             </header>
             
             <main className="conversation">
