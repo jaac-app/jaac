@@ -6,8 +6,8 @@ const SideNavUserOptions = () => {
         <section>
             <h1><FontAwesomeIcon className="fas fa-user" innerText="My Profile" /></h1>
             <ul>
-                <li><FontAwesomeIcon  className="fas fa-cog"></FontAwesomeIcon> Settings </li>
-                <li><FontAwesomeIcon className="far fa-sticky-note"></FontAwesomeIcon> My Notes </li>
+                <li><FontAwesomeIcon  className="fas fa-cog" innerText="My Settings"/> </li>
+                <li><FontAwesomeIcon className="far fa-sticky-note" innerText="My Notes"/> </li>
             </ul>
         </section>
     )

@@ -1,5 +1,9 @@
 import React from "react";
 
+import SideNavUserOptions from "../components/SideNavUserOptions";
+import SideNavChannels from "../components/SideNavChannels";
+import SideNavMessages from "../components/SideNavMessages";
+
 const SideNavbar = () => {
     return (
         <aside class="others open" id="others">
@@ -16,11 +20,13 @@ const SideNavbar = () => {
                         <button type="button" id="createMeetingBtn"> <i class="fas fa-video"></i></button>
                     </div>
                 </section>
-                ${this.getUserOptionsHTML()}
-                ${this.getGroupChannelsHTML()}
-                ${this.getDirectChatsHTML()}
+                <SideNavUserOptions/>
+                <SideNavChannels />
+                <SideNavMessages />
             </div>
             <button class="toggle-others" id="btnOthers"><span>chats</span></button>
         </aside>
     )
 }
+
+export default SideNavbar;

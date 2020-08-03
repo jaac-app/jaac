@@ -1,13 +1,15 @@
 import React from "react";
+import Header from "components/Header";
+
+// Section imports
+import SideNavbar from "./sections/SideNavbar";
 
 const Homepage = () => {
     return (
         <>
         <div className="layout">
-            <header className="branding">
-                <h1 className="logo">JAAC</h1>
-            </header>
-            
+            <Header />
+            <SideNavbar />
             <main className="conversation">
             
             </main>
@@ -15,5 +17,4 @@ const Homepage = () => {
       </>
     )
 }
-
 export default Homepage;
