@@ -1,5 +1,5 @@
 import React from "react";
-import FontAwesomeIcon from "components/FontAwesomeIcon";
+// import FontAwesomeIcon from "components/FontAwesomeIcon";
 import IconButton from "components/IconButton";
 
 const SideNavMessages = () => {
@@ -9,7 +9,7 @@ const SideNavMessages = () => {
             <div class="sideNavSectionHeadingDiv">
                 <span>Direct Messages</span>
                 <button type="button" id="createGroupChannelBtn">
-                    <FontAwesomeIcon className="fas fa-plus" />
+                    {/* <FontAwesomeIcon className="fas fa-plus" /> */}
                 </button>
             </div>
             <ul>

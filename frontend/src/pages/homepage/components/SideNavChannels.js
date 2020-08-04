@@ -1,24 +1,29 @@
 import React from "react";
-import FontAwesomeIcon from "components/FontAwesomeIcon";
+import  { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import IconButton from "components/IconButton";
 
 const SideNavChannels = () => {
     const channelList = ["JAAC App", "Webstore"]
+
+    const selectNewChannel = (channelIndx) => {
+        console.log(channelIndx);
+    }
+
     return (
         <section>
             <div class="sideNavSectionHeadingDiv">
                 <span>Group Channels</span>
                 <button type="button" id="createGroupChannelBtn">
-                    <FontAwesomeIcon className="fas fa-plus" />
+                    <FontAwesomeIcon icon={["fas", "fa-plus"]}/>
                 </button>
             </div>
             <ul>
 
                 {
-                    channelList.map(channel => {
+                    channelList.map((channel, indx) => {
                         return (
-                            <li>
-                                <IconButton innerText={channel} />
+                            <li key={indx}>
+                                <IconButton innerText={channel} onClickHandler={()=>selectNewChannel(indx)}/>
                             </li>
                         )     
                     })
