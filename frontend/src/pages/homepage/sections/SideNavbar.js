@@ -4,7 +4,7 @@ import SideNavUserOptions from "../components/SideNavUserOptions";
 import SideNavChannels from "../components/SideNavChannels";
 import SideNavMessages from "../components/SideNavMessages";
 
-const SideNavbar = () => {
+const SideNavbar = ({channelSelectHandler}) => {
     return (
         <aside class="others open" id="others">
             <div class="side-bar-top-style panel">
@@ -21,7 +21,7 @@ const SideNavbar = () => {
                     </div>
                 </section>
                 <SideNavUserOptions/>
-                <SideNavChannels />
+                <SideNavChannels channelSelectHandler={channelSelectHandler}/>
                 <SideNavMessages />
             </div>
             <button class="toggle-others" id="btnOthers"><span>chats</span></button>

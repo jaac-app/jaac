@@ -2,12 +2,8 @@ import React from "react";
 import  { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import IconButton from "components/IconButton";
 
-const SideNavChannels = () => {
+const SideNavChannels = ({channelSelectHandler}) => {
     const channelList = ["JAAC App", "Webstore"]
-
-    const selectNewChannel = (channelIndx) => {
-        console.log(channelIndx);
-    }
 
     return (
         <section>
@@ -23,7 +19,7 @@ const SideNavChannels = () => {
                     channelList.map((channel, indx) => {
                         return (
                             <li key={indx}>
-                                <IconButton innerText={channel} onClickHandler={()=>selectNewChannel(indx)}/>
+                                <IconButton innerText={channel} onClickHandler={()=>channelSelectHandler(indx)}/>
                             </li>
                         )     
                     })
