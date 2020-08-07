@@ -21,12 +21,12 @@ const GroupConversation = ({selectedChannelID}) => {
             </div>  */}
             <div>
                 {
-                channelMessages.map(message=>{
+                channelMessages.map((message, indx) => {
                     const userData = getUserById(message.senderID);
                     const name = userData.name;
                     const dpUrl = userData.profilePicURL;
                     return (
-                        <div className="left-msg"> 
+                        <div key={indx} className="left-msg"> 
                             <div className="left-message-container">
                             <div className="message-details">
                                 <img src={dpUrl} />

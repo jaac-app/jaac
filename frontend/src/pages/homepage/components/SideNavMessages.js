@@ -6,18 +6,18 @@ const SideNavMessages = () => {
     const receiverList = ["Jingke", "Aman", "Aurnab", "Carol"]
     return (
         <section>
-            <div class="sideNavSectionHeadingDiv">
+            <div className="sideNavSectionHeadingDiv">
                 <span>Direct Messages</span>
                 <button type="button" id="createGroupChannelBtn">
-                    {/* <FontAwesomeIcon className="fas fa-plus" /> */}
+                    <span className="material-icons">control_point</span>
                 </button>
             </div>
             <ul>
                 {
-                    receiverList.map(user => {
+                    receiverList.map((user, indx) => {
                         return (
-                            <li>
-                                <IconButton innerText={user} />
+                            <li key={indx}>
+                                <IconButton icon="account_circle" innerText={user} />
                             </li>
                         )     
                     })

@@ -6,25 +6,34 @@ import SideNavMessages from "../components/SideNavMessages";
 
 const SideNavbar = ({channelSelectHandler}) => {
     return (
-        <aside class="others open" id="others">
-            <div class="side-bar-top-style panel">
+        <aside className="others open" id="others">
+            <div className="side-bar-top-style panel">
                 <section>
-                    <div class="sideNavSectionHeadingDiv main-search">
-                    <input type="text" id="mainSearchInput" class="main-search-input" placeholder="Search" />
-                        <button type="button" id="mainSearchBtn"><i class="fas fa-search"></i></button>
+                    <div className="sideNavSectionHeadingDiv main-search">
+                    <input type="text" id="mainSearchInput" className="main-search-input" placeholder="Search" />
+                        <button type="button" id="mainSearchBtn"><i className="fas fa-search"></i></button>
                     </div>
                 </section>
                 <section>
-                    <div class="sideNavSectionHeadingDiv create-meeting">
+                    <div className="sideNavSectionHeadingDiv create-meeting">
                         <span>Create meeting</span>
-                        <button type="button" id="createMeetingBtn"> <i class="fas fa-video"></i></button>
+                        <button type="button" id="createMeetingBtn"> <i className="fas fa-video"></i></button>
                     </div>
                 </section>
                 <SideNavUserOptions/>
                 <SideNavChannels channelSelectHandler={channelSelectHandler}/>
                 <SideNavMessages />
             </div>
-            <button class="toggle-others" id="btnOthers"><span>chats</span></button>
+            <button className="toggle-others" 
+                onClick={
+                    () => {
+                        const domOthers = document.getElementById("others");
+                        domOthers.classList.toggle('open');
+                    }
+                }
+            >
+                <span>chats</span>
+            </button>
         </aside>
     )
 }
