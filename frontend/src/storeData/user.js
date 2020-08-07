@@ -1,19 +1,22 @@
+import taylor from "img/taylor.jpg";
+import akon from "img/akon.jpg";
+
 const users = {
     1: {
         name: "Jingke",
-        profilePicURL: "img/taylor.jpg",
+        profilePicURL: taylor,
     },
     2: {
         name: "Aurnab",
-        profilePicURL: "img/akon.jpg",
+        profilePicURL: akon,
     },
     3: {
         name: "Aman",
-        profilePicURL: "img/taylor.jpg",
+        profilePicURL: taylor,
     },
     4: {
         name: "Carol",
-        profilePicURL: "img/taylor.jpg",
+        profilePicURL: taylor,
     },
 
 }
