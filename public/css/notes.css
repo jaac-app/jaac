@@ -1,0 +1,236 @@
+
+/* ====== user ====== */
+.user {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99998;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+  }
+  .user-inner {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    z-index: 99999;
+    width: 520px;
+    margin-left: -260px;
+    padding: 30px 0 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    border-radius: 4px;
+  }
+  .user .login-logo {
+    display: block;
+    width: 86px;
+    height: 86px;
+    margin: 0 auto;
+  }
+  .user .register {
+    height: 200px;
+  }
+  .user .login {
+    height: 282px;
+  }
+  .user .holder {
+    width: 286px;
+    margin: 0 auto;
+  }
+  .user .register .holder {
+    margin-top: 30px;
+  }
+  .user .with-line {
+    position: relative;
+    height: 16px;
+  }
+  .user .with-line:before,
+  .user .with-line:after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    width: 50px;
+    border-top: 1px solid #ededed;
+  }
+  .user .with-line:before {
+    left: 0;
+  }
+  .user .with-line:after {
+    right: 0;
+  }
+  .user .with-line span {
+    display: block;
+    text-align: center;
+    color: #999;
+    font-size: 16px;
+  }
+  .user .register .buttons {
+    width: 336px;
+    padding: 22px 0;
+    font-size: 0;
+    margin-left: -25px;
+  }
+  .user .register .buttons a {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin: 0 10px;
+    background: url(../images/login_icons.svg) no-repeat;
+  }
+  .user .register .buttons a.weibo {
+    background-position: 0 0;
+  }
+  .user .register .buttons a.weibo:hover {
+    background-position: 0 -80px;
+  }
+  .user .register .buttons a.qq {
+    background-position: -80px 0;
+  }
+  .user .register .buttons a.qq:hover {
+    background-position: -80px -80px;
+  }
+  .user .register .buttons a.weixin {
+    background-position: -320px 0;
+  }
+  .user .register .buttons a.weixin:hover {
+    background-position: -320px -80px;
+  }
+  .user .register .buttons a.douban {
+    background-position: -160px 0;
+  }
+  .user .register .buttons a.douban:hover {
+    background-position: -160px -80px;
+  }
+  .user .register a {
+    color: #0099ff;
+  }
+  .user .register .use-email {
+    font-size: 16px;
+    text-align: center;
+    line-height: 20px;
+    margin-bottom: 35px;
+  }
+  .user .register .switch-login {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+  .user .register .switch-login a {
+    display: inline-block;
+  }
+  .user .login {
+    margin-top: 20px;
+    margin-right: -10px;
+  }
+  .user .login .buttons {
+    margin: 15px 0 20px;
+    font-size: 0;
+  }
+  .user .login .buttons a {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+    background: url(../images/login_icons_s.svg) no-repeat;
+  } 
+  .user .login .buttons a.weibo {
+    background-position: 0 0;
+  }
+  .user .login .buttons a.weibo:hover {
+    background-position: 0 -80px;
+  }
+  .user .login .buttons a.qq {
+    background-position: -80px 0;
+  }
+  .user .login .buttons a.qq:hover {
+    background-position: -80px -80px;
+  }
+  .user .login .buttons a.weixin {
+    background-position: -160px 0;
+  }
+  .user .login .buttons a.weixin:hover {
+    background-position: -160px -80px;
+  }
+  .user .login .buttons a.douban {
+    background-position: -240px 0;
+  }
+  .user .login .buttons a.douban:hover {
+    background-position: -240px -80px;
+  }
+  .user .login .buttons a.renren {
+    margin: 0;
+    background-position: -320px 0;
+  }
+  .user .login .buttons a.renren:hover {
+    background-position: -320px -80px;
+  }
+  .user .mail-login {
+    margin: 16px 0 12px;
+  }
+  .user .mail-login input {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 34px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.05);
+    color: #777;
+    background-color: #FCFCFC;
+    font-size: 16px;
+  }
+  .user .mail-login input:focus {
+    background-color: #fff;
+  }
+  .user .mail-login .login-up {
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    background: linear-gradient( #E53E49, #D43636);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.08),0 1px 0 rgba(255,255,255,.3);
+    border: 1px solid #C90000;
+    border-radius: 3px;
+  }
+  .user .mail-login .login-up:hover {
+    text-decoration: none;
+    background: linear-gradient( #F45D68, #E54646);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.08),0 1px 0 rgba(255,255,255,.1);
+  }
+  
+  .user .login .switch-register a {
+    display: inline;
+    color: #0099ff;
+  }
+  
+  .user .login .switch-register .forget {
+    float: left;
+  }
+  .user .login .switch-register .go-register {
+    float: right;
+  }
+  .user .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+  }
+  .user .close span {
+    position: relative;
+    left: 8px;
+    top: 6px;
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url(../images/user_close.png) no-repeat;
+  }
+  .user .close span:hover {
+    background-position: 0 -30px;
+  }
+  

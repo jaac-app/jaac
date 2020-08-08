@@ -1,44 +1,13 @@
+let  $notes_btn = document.querySelector(".my-notes")
+var $user = $('#user');
+var $user_inner = $user.find('.user-inner');
+var $user_register = $user.find('.notes');
+var $close_btn = $user.find('.close');
+var $switch_login = $user.find('.switch-login').find('a');
+var $switch_register = $user.find('.go-notes').find('a');
 
-getMynotesHTML(){
-
-
-return `<div class="user" id="user">
-      <div class="user-inner">
-        <div class="notes">
-          <div class="holder">
-            <div class="with-line">
-              <input type="text" placeholder="Untitled" style="border: none;">
-            </div>
-            <div>
-              <input type="text" placeholder="Write your notes">
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-
-`
-}
-    
-
-
-
-
-
-
-
-var $notes_btn = $('#header').find('.notes');
-  var $user = $('#user');
-  var $user_inner = $user.find('.user-inner');
-  var $user_register = $user.find('.notes');
-  var $close_btn = $user.find('.close');
-  var $switch_login = $user.find('.switch-login').find('a');
-  var $switch_register = $user.find('.go-notes').find('a');
-
-  var user_h = 0;
-  var notes_h = $user_notes.height();
+var user_h = 0;
+var notes_h = $user_notes.height();
 
   $notes_btn.click(function () {
     $user.fadeIn();
@@ -129,6 +98,29 @@ var $notes_btn = $('#header').find('.notes');
   };
 
 })(window.jQuery, window, document);
+
+getMynotesHTML(){
+
+
+  return `<div class="user" id="user">
+        <div class="user-inner">
+          <div class="notes">
+            <div class="holder">
+              <div class="with-line">
+                <input type="text" placeholder="Untitled" style="border: none;">
+              </div>
+              <div>
+                <input type="text" placeholder="Write your notes">
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </div>
+  
+  `
+  }
 
 // tabs
 function openPage(pageName, elmnt, color) {
