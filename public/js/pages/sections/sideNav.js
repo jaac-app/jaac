@@ -34,11 +34,13 @@ export default class SideNavPanel{
                 <h1><i class="fas fa-user"> My Profile</i></h1>
                 <ul>
                     <li><i class="fas fa-cog"> Settings </i></li>
-                    <li><i  id="notes" class="far fa-sticky-note"> My Notes </i></li>
+                    <li><i  onclick="myNotes()" class="far fa-sticky-note"> My Notes </i></li>
                 <ul>
             </section>
         `
     }
+
+    
 
     getGroupChannelsHTML(){
         return `
@@ -81,4 +83,12 @@ export default class SideNavPanel{
         const userNames = ['Jingke','Aurnab','Aman','Carol'];
         return userNames.map(userName=>`<li><button type="button">${userName}</button></li>`).join('');
     }
+
+    addEvent
+}
+
+function myNotes() {
+    //create anchor element.
+    var a = document.createElement('a');
+    //
 }

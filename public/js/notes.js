@@ -23,12 +23,6 @@ return `<div class="user" id="user">
 }
     
 
-
-
-
-
-
-
 var $notes_btn = $('#header').find('.notes');
   var $user = $('#user');
   var $user_inner = $user.find('.user-inner');
