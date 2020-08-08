@@ -40,6 +40,10 @@ const GroupConversation = ({selectedChannelID}) => {
                 )
                 }    
             </div>
+            <div>
+                <input className="msg-btn" type="text" placeholder="Type Message"></input>
+                <button className="send-btn" type="button">Send</button>
+            </div>
         </section>
     )
 }

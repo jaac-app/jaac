@@ -3,6 +3,7 @@ import React from "react";
 import SideNavUserOptions from "../components/SideNavUserOptions";
 import SideNavChannels from "../components/SideNavChannels";
 import SideNavMessages from "../components/SideNavMessages";
+import IconButton from "components/IconButton";
 
 const SideNavbar = ({channelSelectHandler}) => {
     return (
@@ -11,13 +12,13 @@ const SideNavbar = ({channelSelectHandler}) => {
                 <section>
                     <div className="sideNavSectionHeadingDiv main-search">
                     <input type="text" id="mainSearchInput" className="main-search-input" placeholder="Search" />
-                        <button type="button" id="mainSearchBtn"><i className="fas fa-search"></i></button>
+                        <button type="button" id="mainSearchBtn"></button>
                     </div>
                 </section>
                 <section>
                     <div className="sideNavSectionHeadingDiv create-meeting">
-                        <span>Create meeting</span>
-                        <button type="button" id="createMeetingBtn"> <i className="fas fa-video"></i></button>
+                        <button type="button" id="createMeetingBtn" IconButton icon="videocam" > <span className="material-icons">videocam</span>
+                            Create meeting</button> 
                     </div>
                 </section>
                 <SideNavUserOptions/>

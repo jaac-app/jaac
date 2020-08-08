@@ -64,6 +64,25 @@
 .conversation{
     padding: 0.5em;
 }
+.msg-btn{
+    padding: 1em;
+    width: 70%;
+    margin-right: 6em;
+    border-radius: 1em;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.send-btn{
+    background-color: var(--col-light-prpl);
+    color: var(--col-light-grey);
+    padding: 1em;
+    margin-right: 1em;
+    border-radius: 1em;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
 @media screen and (min-width: 40em) {
     .message-details {
         display: flex;
@@ -80,6 +99,14 @@
 .conversation{
     padding: 1em;
 }
+.msg-btn{
+    width: 80%;
+    margin-right: 6.5em;
+    margin-left: -2em;
+}
+.send-btn{
+    margin-right: 1.5em;
+}
 }
 
 @media screen and (min-width: 60em) {
@@ -87,4 +114,11 @@
       min-width: 2%;
       max-width: 5%;
   }
+    .msg-btn{
+        width: 95%;
+        margin-right: 7em;
+    }
+    .send-btn{
+        margin-right: 4em;
+    }
 }
