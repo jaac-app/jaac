@@ -31,7 +31,13 @@
     justify-content: center;
     
 }
-
+.grp-chnl-prsn-shw-img{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    border-radius: 50%;
+    margin-left: 25%;
+}
 .group-members-inline img{
     border-radius: 50%;
     width: 5%;
@@ -77,7 +83,7 @@
     background-color: var(--col-light-prpl);
     color: var(--col-light-grey);
     padding: 1em;
-    margin-right: 1em;
+    /* margin-right: 1em; */
     border-radius: 1em;
     position: fixed;
     bottom: 0;
@@ -95,30 +101,54 @@
     }
     .message-details img{
         min-width: 7%;
+        }
+    .conversation{
+        padding: 1em;
     }
-.conversation{
-    padding: 1em;
-}
-.msg-btn{
-    width: 80%;
-    margin-right: 6.5em;
-    margin-left: -2em;
-}
-.send-btn{
-    margin-right: 1.5em;
-}
+    .msg-btn{
+        width: 80%;
+        margin-right: 6.5em;
+        margin-left: -2em;
+    }
+    .send-btn{
+        margin-right: 2%;
+    }
+    .grp-chnl-prsn-shw-img{
+        width: 40%;
+    }
+    .img-border{
+        margin-right: 55%;
+    }
+    .img-border img{
+       max-width: 40%; 
+       margin-left: 75%; 
+    }
 }
 
 @media screen and (min-width: 60em) {
-  .message-details img{
-      min-width: 2%;
-      max-width: 5%;
-  }
+    .message-details img{
+        min-width: 2%;
+        max-width: 5%;
+    }
     .msg-btn{
-        width: 95%;
+        width: 70%;
         margin-right: 7em;
+        box-sizing: border-box;
     }
     .send-btn{
         margin-right: 4em;
+       
+    }
+    .grp-chnl-prsn-shw-img{
+        width: 25%;
+        margin-left: 35%;
+    }
+    .img-border{
+        margin-right:42%;
+    }
+    .img-border img{
+        max-width: 20%;
+       margin-right: 80%;
+      
     }
 }
