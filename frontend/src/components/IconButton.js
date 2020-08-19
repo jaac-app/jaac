@@ -7,7 +7,9 @@ const textStyles = {
 const IconButton = ({innerText, icon, onClickHandler}) => {
     return (
         <button
-            type="button" className="channelBtn" onClick={onClickHandler}
+            type="button" 
+            className="channelBtn" 
+            onClick={onClickHandler}
             >
             <span className="material-icons">{icon}</span>
             <span style={textStyles}>

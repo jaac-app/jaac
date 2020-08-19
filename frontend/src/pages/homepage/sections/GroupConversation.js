@@ -3,9 +3,9 @@ import getChannelDetailsByID from "../../../storeData/channelDetails";
 import getChannelMessagesByID from "../../../storeData/channelConversations";
 import getUserById from "../../../storeData/user";
 
+// Component to show channel details and channel messages
 const GroupConversation = ({selectedChannelID}) => {
 
-    
     const channelDetails = getChannelDetailsByID(selectedChannelID);
     const channelMessages = getChannelMessagesByID(selectedChannelID);
   
@@ -16,9 +16,20 @@ const GroupConversation = ({selectedChannelID}) => {
             </div>
             <h2>{channelDetails.name}</h2>
             <h3>created at: {channelDetails.createdAt}</h3>
-            {/* {/* <div className="group-members-inline">
-                ${this.getMembersHTML()}
-            </div>  */}
+            <div className="grp-chnl-prsn-shw-img">
+                {
+                    channelDetails.membersIDs.map((memberID, indx) => {
+                        const dpUrl = getUserById(memberID).profilePicURL;
+                        return (
+                            <span key={indx}>
+                                <img src={dpUrl} />
+                            </span>
+                        )
+                    })
+                }
+            </div>
+
+            {/* Div to show the channel messages */}
             <div>
                 {
                 channelMessages.map((message, indx) => {
@@ -39,6 +50,10 @@ const GroupConversation = ({selectedChannelID}) => {
                     )}
                 )
                 }    
+            </div>
+            <div>
+                <input className="msg-btn" type="text" placeholder="Type Message"></input>
+                <button className="send-btn" type="button">Send</button>
             </div>
         </section>
     )

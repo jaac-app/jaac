@@ -3,7 +3,9 @@ import React from "react";
 import SideNavUserOptions from "../components/SideNavUserOptions";
 import SideNavChannels from "../components/SideNavChannels";
 import SideNavMessages from "../components/SideNavMessages";
+import IconButton from "../../../components/IconButton";
 
+// Component to show SideNavbar
 const SideNavbar = ({channelSelectHandler}) => {
     return (
         <aside className="others open" id="others">
@@ -11,16 +13,16 @@ const SideNavbar = ({channelSelectHandler}) => {
                 <section>
                     <div className="sideNavSectionHeadingDiv main-search">
                     <input type="text" id="mainSearchInput" className="main-search-input" placeholder="Search" />
-                        <button type="button" id="mainSearchBtn"><i className="fas fa-search"></i></button>
+                        <IconButton icon="search" />
                     </div>
                 </section>
                 <section>
                     <div className="sideNavSectionHeadingDiv create-meeting">
-                        <span>Create meeting</span>
-                        <button type="button" id="createMeetingBtn"> <i className="fas fa-video"></i></button>
+                        <IconButton  innerText="Create meeting" /> <IconButton icon="videocam"/>
                     </div>
                 </section>
-                <SideNavUserOptions/>
+                {/* Components for sideNavbar */}
+                <SideNavUserOptions />
                 <SideNavChannels channelSelectHandler={channelSelectHandler}/>
                 <SideNavMessages />
             </div>
