@@ -13,13 +13,14 @@ https://amandeep-bhullar.github.io/jaac-app-live/
 # Summary
 JAAC App is a modern collaborative live chat app written in React. Users can create new channel and new direct messaging channels to chat with each other. App has responsive design and search functionalities.
 
-# Features
-1. Group Channel Messaging - Add new Channel
-2. Direct Messaging
-3. Create meeting
-4. User Notes
-5. Search users/messages/channels
-6. User profile
+# Features:- A Side Navebar will have all button of below described features:
+1. Search users/messages/channels
+2. Create meeting
+3. User profile
+4. Setting
+5. My Notes
+6. Group Channel Messaging - Add new Channel
+7. Direct Messaging
 
 # Features working with fake data
 Group Channels:-  
